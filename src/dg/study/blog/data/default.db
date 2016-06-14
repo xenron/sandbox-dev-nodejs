@@ -1,0 +1,120 @@
+{
+  "data": {
+    "user": [
+      {
+        "name": "d",
+        "password": "73:38AF9AE68547F04494B47D7DF1AD5693:09",
+        "id": 1,
+        "createdAt": "2015-05-23T07:45:47.250Z",
+        "updatedAt": "2015-05-23T07:45:47.250Z"
+      }
+    ],
+    "article": [
+      {
+        "author": "d",
+        "title": "hello， world",
+        "summary": "<p>cnpmjs.org: Private npm registry and web for Company\nSo cnpm is meaning: Company npm.</p>\n<p>Registry\nOur public registry: r.cnpmjs.org, syncing from registry.npmjs.org\ncnpmjs.org version: 2.0.0-rc.15\nNode.js version: v1.6.1\nFor developers behind the GFW, please visit the Chinese mirror. 中国用户请访问国内镜像站点。\n157,357 total packages  888,875 total package versions  20  total delete packages\n9,241   downloads today 207,464 downloads in this week  679,574 downloads in this month\n31,374  downloads in the last day   219,492 downloads in the last week  1,013,232   downloads in the last month\nSync Status\nThis registry will sync all packages from official registry.</p>\n<p>Last sync time is Sat May 23 2015 15:30:13 GMT+0800 (CST).</p>\n<p>1124 packages need to be sync       100% progress\n1124 packages and dependencies sync successed   0 packages and dependencies sync failed last success: zzishsdk\nVersion Badge\nDefault style is flat-square.</p>\n<p>Badge URL: https://cnpmjs.org/badge/v/cnpmjs.org.svg cnpmjs.org-badge</p>\n<p>",
+        "content": "   \r\ncnpmjs.org: Private npm registry and web for Company\r\nSo cnpm is meaning: Company npm.\r\n\r\nRegistry\r\nOur public registry: r.cnpmjs.org, syncing from registry.npmjs.org\r\ncnpmjs.org version: 2.0.0-rc.15\r\nNode.js version: v1.6.1\r\nFor developers behind the GFW, please visit the Chinese mirror. 中国用户请访问国内镜像站点。\r\n157,357\ttotal packages\t888,875\ttotal package versions\t20\ttotal delete packages\r\n9,241\tdownloads today\t207,464\tdownloads in this week\t679,574\tdownloads in this month\r\n31,374\tdownloads in the last day\t219,492\tdownloads in the last week\t1,013,232\tdownloads in the last month\r\nSync Status\r\nThis registry will sync all packages from official registry.\r\n\r\nLast sync time is Sat May 23 2015 15:30:13 GMT+0800 (CST).\r\n\r\n1124 packages need to be sync\t\t100% progress\r\n1124 packages and dependencies sync successed\t0 packages and dependencies sync failed\tlast success: zzishsdk\r\nVersion Badge\r\nDefault style is flat-square.\r\n\r\nBadge URL: https://cnpmjs.org/badge/v/cnpmjs.org.svg cnpmjs.org-badge\r\n\r\n<0.1.0 & >=0.0.0: red-badge\r\n<1.0.0 & >=0.1.0: red-badge\r\n>=1.0.0: red-badge\r\nUsage\r\nuse our npm client cnpm(More suitable with cnpmjs.org and gzip support), you can get our client through npm:\r\n\r\n$ npm install -g cnpm --registry=https://r.cnpmjs.org\r\nOr you can alias NPM to use it:\r\n\r\nalias cnpm=\"npm --registry=https://r.cnpmjs.org \\\r\n--cache=$HOME/.npm/.cache/cnpm \\\r\n--disturl=https://cnpmjs.org/mirrors/node \\\r\n--userconfig=$HOME/.cnpmrc\"\r\n\r\n#Or alias it in .bashrc or .zshrc\r\n$ echo '\\n#alias for cnpm\\nalias cnpm=\"npm --registry=https://r.cnpmjs.org \\\r\n  --cache=$HOME/.npm/.cache/cnpm \\\r\n  --disturl=https://cnpmjs.org/mirrors/node \\\r\n  --userconfig=$HOME/.cnpmrc\"' >> ~/.zshrc && source ~/.zshrc\r\ninstall\r\nInstall package from r.cnpmjs.org. When installing a package or version does not exist, it will try to install from the official registry(registry.npmjs.org), and sync this package to cnpm in the backend.\r\n\r\n$ cnpm install [name]\r\nsync\r\nOnly cnpm cli has this command. Meaning sync package from source npm.\r\n\r\n$ cnpm sync connect\r\nsync package on web: sync/connect\r\n\r\n$ open https://cnpmjs.org/sync/connect\r\npublish / unpublish\r\nOnly admin user can publish / unpublish package to private registry.\r\n\r\n$ cnpm publish [name]\r\n$ cnpm unpublish [name]\r\nOther commands\r\nSupport all the other npm commands. e.g.:\r\n\r\n$ cnpm info cnpm\r\nTODO list\r\n@see Github Issues\r\n\r\nHistories\r\nRelease History.\r\n\r\nnpm and cnpm relation\r\nnpm&cnpm\r\n\r\nSponsors\r\nUCloud云计算\r\nCopyright 2013 - 2014 © cnpmjs.org | Home | 站长统计 | 今日IP[101] | 今日PV[178] | 昨日IP[283] | 昨日PV[480] | 当前在线[1]",
+        "id": 1,
+        "createdAt": "2015-05-23T07:46:29.695Z",
+        "updatedAt": "2015-05-23T07:46:29.695Z"
+      },
+      {
+        "author": "d",
+        "title": "使用带有功能性的七牛域名进行网络资源的解析可获得相应的效果",
+        "summary": "<p>leizongmin@qq.com<br>\n开发者平台 新手上路 文档中心 问答社区\nnodejs-example-myblog\n空间\n内容管理\n数据处理\n空间设置\n基本设置\n镜像存储、防盗链\n域名设置\n默认域名、域名绑定\n高级设置\n访问控制、删除空间\n七牛域名\n使用带有功能性的七牛域名进行网络资源的解析可获得相应的效果。\n7xj8ts.com1.z0.glb.clouddn.com\n全球下载加速</p>\n<p>七牛全球加速节点覆盖42个国家和地区。\n申请开通全球加速服务请点击配置提交申请。\n配置\nHTTPS\n资源的HTTPS请求可通过配置https://dn-yourdomain.qbox.me的域名来实现。\n配置\n自定义域名\n使用符合品牌特征的自定义域名访问资源。\n仅支持在中国大陆完成备案的域名。\n使用自定义域名请先绑定手机，并确认账户余额大于10元。\n配置\n默认域名\n选择默认域名后，在七牛控制台中引用的URL以此域名显示。\n7xj8ts.com1.z0.glb.clouddn.com\n配置\n七牛云存储  招贤纳士  关于七牛  服务协议  SLA 协议  沪ICP备11037377号-5</p>\n",
+        "content": "\r\nleizongmin@qq.com  \r\n开发者平台 新手上路 文档中心 问答社区\r\nnodejs-example-myblog\r\n空间\r\n内容管理\r\n数据处理\r\n空间设置\r\n基本设置\r\n镜像存储、防盗链\r\n域名设置\r\n默认域名、域名绑定\r\n高级设置\r\n访问控制、删除空间\r\n七牛域名\r\n使用带有功能性的七牛域名进行网络资源的解析可获得相应的效果。\r\n7xj8ts.com1.z0.glb.clouddn.com\r\n全球下载加速\r\n\r\n七牛全球加速节点覆盖42个国家和地区。\r\n申请开通全球加速服务请点击配置提交申请。\r\n配置\r\nHTTPS\r\n资源的HTTPS请求可通过配置https://dn-yourdomain.qbox.me的域名来实现。\r\n配置\r\n自定义域名\r\n使用符合品牌特征的自定义域名访问资源。\r\n仅支持在中国大陆完成备案的域名。\r\n使用自定义域名请先绑定手机，并确认账户余额大于10元。\r\n配置\r\n默认域名\r\n选择默认域名后，在七牛控制台中引用的URL以此域名显示。\r\n7xj8ts.com1.z0.glb.clouddn.com\r\n配置\r\n 七牛云存储  招贤纳士  关于七牛  服务协议  SLA 协议  沪ICP备11037377号-5\r\n",
+        "createdAt": "2015-05-23T08:53:10.502Z",
+        "updatedAt": "2015-05-23T08:53:10.502Z",
+        "id": 2
+      }
+    ],
+    "email_verify": []
+  },
+  "schema": {
+    "user": {
+      "name": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      },
+      "domain_name": {
+        "type": "string"
+      },
+      "theme": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "article": {
+      "author": {
+        "type": "string"
+      },
+      "title": {
+        "type": "string"
+      },
+      "summary": {
+        "type": "string"
+      },
+      "content": {
+        "type": "text"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "email_verify": {
+      "code": {
+        "type": "string"
+      },
+      "user": {
+        "type": "string"
+      },
+      "op_type": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "user": {
+      "id": 1
+    },
+    "article": {
+      "id": 2
+    },
+    "email_verify": {}
+  }
+}

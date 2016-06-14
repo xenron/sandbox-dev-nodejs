@@ -1,0 +1,12 @@
+<h1>列表</h1>
+
+<link rel="stylesheet" href="/public/style.css">
+
+<ul>
+
+<% list.forEach(function (item) { %>
+  <li><a href="/item/<%= item.id %>"><%= item.title %></a></li>
+<% }); %>
+
+</ul>
+
