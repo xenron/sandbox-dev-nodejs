@@ -1,0 +1,42 @@
+{
+	"name": "strive",
+	"description": "Declarative grunting, allowing minification and testing to be declared using just html.",
+	"version": "0.0.2",
+	"author": {
+		"name": "Sandro Pasquali",
+		"email": "spasquali@gmail.com",
+		"url": "http://www.sandro.mobi"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:sandro-pasquali/strive.git"
+	},
+	"bugs": {
+		"url": "https://github.com/sandro-pasquali/strive/issues"
+	},
+	"engines": {
+		"node": ">= 0.10.10"
+	},
+	"scripts": {
+		"postinstall": "npm install -g grunt-cli"
+	},
+	"dependencies" : {
+		"uglify-js": "2.3.6",
+		"clean-css": "1.0.10",
+		"mocha": "~1.8"
+	},
+	"devDependencies": {
+		"grunt-contrib-jshint": "0.6.x",
+		"grunt-contrib-watch": "0.5.3",
+		"grunt-lib-phantomjs": "0.3.0",
+		"grunt": "0.4.x"
+	},
+	"licenses": [{
+		"type": "MIT",
+		"url": "http://opensource.org/licenses/MIT"
+	}],
+	"keywords": [
+		"grunt",
+		"nodejs"
+	]
+}

@@ -1,0 +1,18 @@
+doctype 5
+html(lang="en")
+	head
+		title Mastering NodeJS
+	body
+		- if(!user)
+			h2 Not Authenticated
+			#fb-login.fb_button(style='background-position: left -188px')
+				a.fb_button_medium(href='/auth/facebook')
+					span#fb_login_text.fb_button_text Connect with Facebook
+		- else
+			h2 Welcome To the Site!
+			
+			-for(var prop in user)
+				p #{prop}: #{user[prop]}
+			
+			h3
+				a(href='/logout') Logout

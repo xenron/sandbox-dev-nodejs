@@ -1,0 +1,14 @@
+---
+- hosts: all
+  sudo: yes
+  roles:
+    - common
+  vars:
+    env:
+      user: 'vagrant'
+    nvm:
+      version: '0.24.1'
+      node_version: '0.12'
+    build:
+      repo_path: 'https://github.com/sandro-pasquali'
+      repo_name: 'express-webhook'

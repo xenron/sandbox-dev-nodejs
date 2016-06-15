@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <title>Editor</title>
+    <style type="text/css">
+		body {
+			overflow: hidden;
+			font-family: Helvetica;
+			color: black;
+		}
+		
+		.ace_bold {
+			font-weight:bold;
+		}
+		
+		.ace_italic {
+			font-style:italic;
+		}
+		
+		#header {
+			position: fixed;
+			top: 0;
+			right: 0;
+			height: 30px;
+			width: 100%;
+			background-color: #9DBBF7;
+		}
+		
+		#htext {
+			line-height: 30px;
+			vertical-align: middle;
+		
+			padding-left: 10px;
+		}
+		
+		#editor { 
+			margin: 0;
+			position: absolute;
+			top: 30px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+		
+		#header a {
+		  font-weight: bold;
+		  float: right;
+		}
+    </style>
+  </head>
+
+  <body>
+    <div id="header">
+
+    	Editing <b id="docname">...</b>
+		<a href="/">Create New Document</a>
+
+    </div>
+
+    <div id="editor">Loading...</div>
+    <script src="/ace/ace.js"></script>
+    <script src="/ace/mode-javascript.js"></script>
+    <script src="/ace/theme-eclipse.js"></script>
+    <script src="/channel/bcsocket.js"></script>
+    <script src="/share/share.js"></script>
+    <script src="/share/ace.js"></script>
+    <script>
+
+	window.onload = function() {
+	
+		var editor = ace.edit("editor");
+		
+		//	Various Ace editor settings.
+		//	@see http://ace.ajax.org/#nav=howto
+		//
+		editor.setReadOnly(true);
+		editor.getSession().setUseSoftTabs(true);
+		editor.getSession().setTabSize(4);
+		editor.getSession().setMode(new (require("ace/mode/javascript").Mode));
+		editor.setTheme("ace/theme/eclipse");
+		
+		//	Create a new document id if none exists.
+		//
+		if (!document.location.hash) {
+			document.location.hash = '#' + new Date().getTime().toString(36);
+		}
+		var docName = "code:" + document.location.hash.slice(1);
+		
+		var span = document.getElementById('docname').innerHTML = docName;
+		
+		sharejs.open(docName, 'text', function(error, doc) {
+			
+			if(error) {
+				throw(error);
+			}
+		
+			//	Create an initial document
+			//
+			if(doc.created) {
+				doc.insert(0, "var helloWorld = function() { \n    alert('Hello World!'); \n};");
+			}
+		
+			doc.attach_ace(editor);
+			editor.setReadOnly(false);
+		});
+	};
+	
+    </script>
+  </body>
+</html>  
+
+

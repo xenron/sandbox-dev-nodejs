@@ -1,0 +1,19 @@
+{
+  "name": "hyperloglog",
+  "version": "2.0.0",
+  "description": "Counting using hyperloglog",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+  	"redis" 	: "*",
+  	"hiredis" 	: "*"
+  },
+  "keywords": [
+    "hyperloglog",
+    "redis"
+  ],
+  "author": "Sandro Pasquali <spasquali@gmail.com>",
+  "license": "MIT"
+}

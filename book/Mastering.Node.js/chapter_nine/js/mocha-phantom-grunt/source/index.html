@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title><%= title %></title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+
+    <!-- build:[href] img/ -->
+    <link rel="apple-touch-icon-precomposed" href="path/to/my/theme/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="path/to/my/theme/apple-touch-icon-72x72-precomposed.png" sizes="72x72">
+    <link rel="apple-touch-icon-precomposed" href="path/to/my/theme/apple-touch-icon-114x114-precomposed.png" sizes="114x114">
+    <link rel="apple-touch-icon-precomposed" href="path/to/my/theme/apple-touch-icon-144x144-precomposed.png" sizes="144x144">
+    <!-- /build -->
+
+	<!-- build:css:deploy css/style.min.css -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/main.css">
+    <!-- /build -->
+        
+  </head>
+  <body>
+
+    <!-- build:remove -->
+    <p>This should be removed after build</p>
+    <!-- /build -->
+
+    <!-- build:template
+    <p><%= message %></p>
+    /build -->
+
+    <!-- build:js:deploy js/app.min.js -->
+    <script src="js/file1.js"></script>
+    <script src="js/file2.js"></script>
+    <script src="js/file3.js"></script>
+    <!-- /build -->
+    
+    <!-- build:remove:deploy -->
+    <script src="../../test/framework.js"></script>
+    <script src="../../test/spec/file1.js"></script>  
+    <script src="../../test/spec/file2.js"></script>   
+    <script src="../../test/spec/file3.js"></script>   
+    <script>
+    	//	mocha.run();
+    </script>
+    <!-- /build -->
+
+  </body>
+</html>

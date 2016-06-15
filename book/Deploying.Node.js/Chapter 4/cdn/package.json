@@ -1,0 +1,14 @@
+{
+  "name": "cdian",
+  "version": "1.0.0",
+  "description": "using cloudflare as a cdn",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sandro pasquali <spasquali@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cloudflare": "0.0.8"
+  }
+}

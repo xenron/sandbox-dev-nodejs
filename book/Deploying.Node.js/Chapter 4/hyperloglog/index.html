@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Anonymous Unique Fingerprinting</title>
+	<style type="text/css">
+	
+		div {
+			cursor: pointer;
+		}
+		
+		#counter {
+			font-size: 40px;
+			font-weight: bold;
+			color: skyblue;
+		}
+	
+	</style>
+</head>
+<body>
+
+<p>
+	<button id="log">Send a specific value (123)</button>
+</p>
+<p>
+	<button id="random">Send a random value</button>
+</p>
+<p>
+	<div id="counter"></div>
+</p>
+
+<script>
+
+	(function() {
+
+	function send(route, cb) {
+		var caller = new XMLHttpRequest();
+		caller.onload = cb || function() {
+			var count = JSON.parse(this.responseText).count;
+			document.getElementById('counter').innerHTML = count;
+		};
+		caller.open("get", route, true);
+		caller.send();
+	}
+	
+	document.addEventListener('click', function(ev) {
+		var el = ev.target;
+		
+		switch(el.getAttribute('id')) {
+		
+			case 'log':
+				send("/log/123");
+			break;
+			
+			case 'random':
+				send("/log/" + (Math.floor(Math.random() * 1e10)).toString());
+			break;
+			
+			default:
+			break;
+		}
+	});
+	
+	})()
+
+</script>
+
+</body>
+</html>

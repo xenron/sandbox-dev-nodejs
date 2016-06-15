@@ -1,0 +1,190 @@
+<html>
+<head>
+<meta charset="utf-8" />
+
+<style type="text/css">
+
+table {
+	width: 100%;
+}
+
+td {
+	vertical-align: top;
+}
+
+input {
+	width: 300px;
+	height: 26px;
+	padding: 2px;
+	font-size: 16px;
+}
+
+#questions {
+	width: 200px;
+}
+
+#answers {
+}
+
+#questions a {
+	display: block;
+}
+
+.question {
+	font-family: Helvetica,
+	font-weight: bold;
+	font-size: 14px;
+	color: purple;
+}
+
+</style>
+
+<script>
+
+"use strict";
+
+window.onload = function () {
+
+	var USER_ID		= null;
+	var LAST_SEL	= null;
+
+	var evSource	= new EventSource('/login');
+	
+	var answerContainer = document.getElementById('answers');
+	var questionContainer = document.getElementById('questions');
+
+	var showAnswer = function(answers) {
+		answerContainer.innerHTML = "";
+		var x = 0;
+		for(; x < answers.length; x++) {
+			var li = document.createElement('li');
+			li.appendChild(document.createTextNode(answers[x]));
+			answerContainer.appendChild(li);
+		}
+	}
+	
+	var showQuestion = function(questions) {
+		questionContainer.innerHTML = "";
+		for(var q in questions) {
+			var li = document.createElement('li');
+			var a = document.createElement('a');
+			a.href = "#" + q;
+			a.appendChild(document.createTextNode(q));
+			li.appendChild(a);
+			questionContainer.appendChild(li);
+		}
+	}
+	
+	evSource.addEventListener('message', function(broadcast) {
+	
+		var data = JSON.parse(broadcast.data);
+
+		switch(data.type) {
+			
+			case "questions":
+				showQuestion(data.questions);
+			break;
+			
+			case "answers":
+				showAnswer(data.answers);
+			break;
+
+			case "notification":
+				alert(data.message);
+			break;
+			
+			default:
+				throw "Received unknown message type";
+			break;
+		}
+		
+	});
+	
+	evSource.addEventListener('login', function(broadcast) {
+
+		USER_ID = JSON.parse(broadcast.data);
+	});
+	
+	evSource.addEventListener('ping', function(broadcast) {
+		console.log(broadcast);
+	});
+	
+	evSource.addEventListener('event', function() {
+		console.log("event");
+	});
+
+	evSource.addEventListener('open', function() {
+		console.log("connection opened");
+	});
+
+	evSource.addEventListener('error', function() {
+		console.log("connection error");
+	});
+	
+	var send = function(method, argument) {
+		var xhr = new XMLHttpRequest();
+		xhr.open('POST', '/' + method + '/' + encodeURIComponent(argument), true);
+		xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+		xhr.setRequestHeader('_sse_user_id_', USER_ID);
+		xhr.send(null);
+	};
+
+	document.getElementById("askquestion").onsubmit = function() {
+		var el = this.elements[0];
+		send("askquestion", el.value);
+		el.value = "";
+		return false;
+	};
+	
+	document.getElementById("addanswer").onsubmit = function() {
+		var el = this.elements[0];
+		send("addanswer", el.value)
+		el.value = "";
+		return false;
+	};
+	
+	questionContainer.onclick = function(e) {
+	
+		e = e || window.event;
+		var target = e.target || e.srcElement;
+		
+		send("selectquestion", target.innerHTML);
+	}
+};
+
+</script>
+
+</head>
+<body>
+
+	<table>
+		<tr>
+			<td>
+				<form id="askquestion" action="#">
+					<input type="text" maxlength="140" required /><br />
+					<input type="submit" value="Ask Question" />
+				</form>
+			</td>
+			<td>
+				<form id="addanswer" action="#">
+					<input type="text" maxlength="140" required /><br />
+					<input type="submit" value="Add Answer" />
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td>Questions</td>
+			<td>Answers</td>
+		</tr>
+		<tr>
+			<td>
+				<ul id="questions"></ul>
+			</td>
+			<td>
+				<ol id="answers"></ol>
+			</td>
+		</tr>
+	</table>
+			
+</body>
+</html>

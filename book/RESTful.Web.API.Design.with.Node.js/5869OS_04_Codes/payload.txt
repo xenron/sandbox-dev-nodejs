@@ -1,0 +1,18 @@
+GET http://localhost:3000/contacts/+359777123456 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:3000
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+
+
+-------------------
+
+HTTP/1.1 200 OK
+X-Powered-By: Express
+content-type: application/json
+content-length: 296
+etag: "699344432"
+Date: Mon, 27 Oct 2014 19:06:37 GMT
+Connection: keep-alive
+
+{"firstname":"Joe","lastname":"Smith","title":"Mr.","company":"Dev Inc.","jobtitle":"Developer","primarycontactnumber":"+359777123456","othercontactnumbers":["+359777456789","+359777112233"],"primaryemailaddress":"joe.smith@xyz.com","emailaddresses":["j.smith@xyz.com"],"groups":["Dev","Family"]}

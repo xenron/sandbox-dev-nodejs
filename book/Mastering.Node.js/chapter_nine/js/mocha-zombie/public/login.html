@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Login</title>
+	<script>
+	
+		var checkForm = function(frm) {
+			var fields = frm.querySelectorAll('input');
+			var warn = document.getElementById('warn');
+			if(fields[0].value == "" || fields[1].value == "") {
+				if(!warn) {
+					warn = document.createElement('div');
+					warn.setAttribute('id', 'warn');
+					warn.appendChild(document.createTextNode("Please fill in all fields"));
+					document.body.appendChild(warn);
+				}
+				return false;
+			}
+			if(warn) {
+				warn.parentNode.removeChild(warn);
+			}
+		}
+		
+	</script>
+</head>
+<body>
+
+<h1>Login</h1>
+<form>
+
+<input type="text" id="email" size="20" />
+<input type="password" id="password" size="20" />
+<input type="submit" value="Sign In" onclick="return checkForm(this.parentNode)" />
+
+</form>
+
+</body>
+</html>

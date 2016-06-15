@@ -1,0 +1,13 @@
+{
+	"name": "node-facebook",
+	"version": "0.1.0",
+	"description": "Example of using passport with facebook",
+	"author": "Sandro Pasquali <spasquali@gmail.com>",
+	"dependencies": {
+		"express"		: "*",
+		"passport"		: "*",
+		"jade"			: "*",
+		"aws-sdk"		: "*"
+	},
+	"engine": "node >= 0.10.21"
+}

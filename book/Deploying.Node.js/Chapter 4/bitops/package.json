@@ -1,0 +1,19 @@
+{
+  "name": "bitops",
+  "version": "1.0.0",
+  "description": "redis bit operations",
+  "main": "setarticlebits.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "redis",
+    "bitops"
+  ],
+  "dependencies": {
+    "redis": "*",
+    "hiredis": "*"
+  },
+  "author": "spasquali@gmail.com",
+  "license": "MIT"
+}

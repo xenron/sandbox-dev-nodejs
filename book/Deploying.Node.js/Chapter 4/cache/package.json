@@ -1,0 +1,16 @@
+{
+  "name": "rediscache",
+  "version": "1.0.0",
+  "description": "A simple Redis cache",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bluebird": "^2.3.11",
+    "hiredis": "^0.1.17",
+    "redis": "^0.12.1"
+  },
+  "author": "Sandro Pasquali <spasquali@gmail.com>",
+  "license": "MIT"
+}

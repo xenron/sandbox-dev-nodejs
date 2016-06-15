@@ -1,0 +1,11 @@
+{
+	"name": "node-aws",
+	"version": "0.1.0",
+	"description": "Examples of using AWS services via Node",
+	"author": "Sandro Pasquali <spasquali@gmail.com>",
+	"dependencies": {
+		"express"		: "*",
+		"aws-sdk"		: "*"
+	},
+	"engine": "node >= 0.10.10"
+}

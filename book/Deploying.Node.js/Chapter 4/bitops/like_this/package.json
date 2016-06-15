@@ -1,0 +1,22 @@
+{
+  "name": "likethis",
+  "version": "1.0.0",
+  "description": "a simple 'like this page' service",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "tagging",
+    "redis",
+    "bitops"
+  ],
+  "dependencies": {
+    "hiredis": "*",
+    "murmurhash3": "^0.2.10",
+    "redis": "*"
+  },
+  "author": "spasquali@gmail.com",
+  "license": "MIT"
+}
