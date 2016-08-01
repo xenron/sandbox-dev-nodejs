@@ -1,0 +1,43 @@
+<html>
+<head>
+	<meta http-equiv="content-Type" content="text/html;charset=gb2312">
+	<title>点击弹出登录窗口</title>
+</head>
+<body>
+	<hr>
+	<a href="#" onClick="login()" style="font-size:24px;">登陆|</a>
+	<div id="loginbg"></div>
+	<hr>
+	
+	<script language="javascript">
+		var appendDiv= function(callback){
+			var  div = document.createElement("div");
+			div.innerHTML = 33 ;
+			document.body.appendChild(div);
+			if (typeof callback ==='function'){
+				callback(div);
+			}
+			
+			var sWidth,sHeight;
+			sWidth = screen.width;
+			sWidth = document.body.offsetWidth;
+			sHeight=document.body.offsetHeight;
+			if (sHeight<screen.height) {
+				sHeight=screen.height;
+			}
+			document.getElementById("loginbg").style.width = sWidth + "px";
+			document.getElementById("loginbg").style.height = sHeight + "px";
+			document.getElementById("loginbg").style.display = "block";
+			document.getElementById("loginbg").style.display = "block";
+			// document.getElementById("loginbg").style.right = document.getElementById("login").offsetLeft + "px";
+
+		};
+		function login() {
+			appendDiv(function(node){
+				// node.style.display ='none';
+			});
+		}
+		
+	</script>
+</body>
+</html>
