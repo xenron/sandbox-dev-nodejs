@@ -1,0 +1,34 @@
+<html>
+
+<head >
+ <meta charset='utf-8' >
+ <title >Test jquery</title>
+  <link rel = 'stylesheet' href = 'test1.css' >
+ <script src = 'jquery.js'></script>
+ <script src = 'test3.js'></script>
+</head>
+
+		<div id ='test_sj'>
+			<span>
+			    <a href='#'>tt</a>
+			</span>
+		</div>
+   <div id ='switcher'>
+     <h3>按钮</h3>
+    <button id ='switcher-default' >Default</button>
+	<button id ='switcher-narrow' >Narrow column</button>
+	<button id ='switcher-large' >Large Print</button>
+   </div>
+   
+   <div>
+  
+     <p>原生的window.onload也能实现同样的效果，但两者触发操作的时间存在着微妙的差异</p>
+    <p>当文档完全下载到浏览器中时就会触发window.onload事件,意味着页面上所有的元素都可以被操作</p>
+    <p>但是使用$(document).ready()注册的事件处理程序，则会在DOM完全就绪并可以使用时调用</p>
+    <p>这意味着所有元素对脚本而言是可以访问的，但是并不意味着所有关联文件都已经下载完毕。
+     换句话说，当HTML下载完成并解析为DOM树后，代码就可以运行 使用后面一种方法，可以基于一个页面执行多个脚本</p>
+
+	 </p>
+   </div>
+</body>
+</html>
