@@ -4,7 +4,13 @@
  <title >Test jquery</title>
   <script src = 'https://code.jquery.com/jquery-3.1.0.js'></script>
 	<script>
-		console.log("test")
+		$(document).ready(function(){
+			$.each($('li a'), function(index, element_a) {
+				$.each($(element_a).closest("ul"), function(index, element_li) {
+					$(element_li).children().addClass( "testLink" );
+				});
+			});
+		});
 	</script>
 </head>
 
