@@ -1,0 +1,90 @@
+@CHARSET "UTF-8";
+
+.redBall{
+	background-image:url('/MaWeb/images/redball.png');
+	color:white;
+	background-repeat:no-repeat;
+   	padding-left:8px;
+   	padding-right:8px;
+   	padding-top:4px;
+    padding-bottom:6px;
+}
+.blueBall{
+	background-image:url('/MaWeb/images/blueball.png');
+	color:white;
+	background-repeat:no-repeat;
+	padding-left:8px;
+   	padding-right:8px;
+   	padding-top:4px;
+   	padding-bottom:6px;
+}
+.whiteBall{
+	background-image:url('/MaWeb/images/whiteball.png');
+	color:black;
+	background-repeat:no-repeat;
+	padding-left:8px;
+   	padding-right:8px;
+   	padding-top:4px;
+   	padding-bottom:6px;
+}
+.tab{
+	border-top: solid 1px black;
+	border-left: solid 1px black;
+}
+.tab td {
+	border-bottom: solid 1px black;
+	border-right: solid 1px black;
+}
+.nav ul{
+	width:980px;
+	border:1px solid #000;
+	margin:0px auto 0px auto;
+    height:28px;
+   
+}
+.nav ul li{
+	float:left;
+	 list-style-type:none;
+	 margin:0px;
+
+}
+.nav ul li a{
+	width:80px;
+	height:28px;
+	background:red;
+	text-align:center;
+	text-decoration:none;
+	display:block;
+	line-heght:28px;
+	color:white;
+	magin:5px 10px;
+	font-size:12px;
+}
+.nav ul li a:hover{
+	width:80px;
+	height:28px;
+	background:white;
+	text-align:center;
+	text-decoration:none;
+	display:block;
+	line-heght:28px;
+	color:black;
+	magin:5px 10px;
+	font-size:12px;
+}
+.content{
+	width:980px;
+	margin:50px auto 0px auto;
+	
+}
+.note-area{
+	height:450px;
+	overflow-y:scroll;
+	margin-bottom:10px;
+}
+#editor {
+	padding:10px;
+	font-weight:bold;
+	padding-left:40px;
+	font-size:20px;
+}

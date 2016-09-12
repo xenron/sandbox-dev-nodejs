@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+span{
+	width:80px;
+	height:80px;
+}
+.redBall{
+	background-color:red;
+	color:white;
+}
+.blueBall{
+	background-color:blue;
+	color:white;
+
+}
