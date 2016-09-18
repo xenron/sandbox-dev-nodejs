@@ -47,7 +47,8 @@ myAppModule.controller('historyController',function($scope,$http){
             for(var i = 0;i<16;i++){
 	            $scope.blueList[i] = i+1;
             };
-    }
+        }
+    };
    
 });
 myAppModule.controller('chooseController',function($scope){

@@ -4,6 +4,12 @@
 
 //定义模块
 var myAppModule = angular.module('myApp',[]);
+app.directive('sayHello',function(){
+                   return {
+                            restrict : 'E',
+                            templateUrl:'template.htm',
+                   };
+         })
 myAppModule.controller('historyController',function($scope,$http){
 	var url = '';
 	/*$http.get(url).success(function(data,status,headers,config){
@@ -36,6 +42,19 @@ myAppModule.controller('historyController',function($scope,$http){
 		  
 	   }
    };
+   $scope.hello = function(name) {
+        $scope.redList = [];
+        $scope.blueList = [];
+        if (name=="red") {
+		    for(var i = 0;i<33;i++) {
+		        $scope.redList[i] = i+1;
+            };
+        } else if (name=="blue") {
+            for(var i = 0;i<16;i++){
+	            $scope.blueList[i] = i+1;
+            };
+        }
+    };
    
 });
 myAppModule.controller('chooseController',function($scope){
