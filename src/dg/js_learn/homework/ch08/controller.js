@@ -36,6 +36,9 @@ myAppModule.controller('historyController',function($scope,$http){
 		  
 	   }
    };
+   $scope.hello = function(name) {
+        alert('Hello ' + (name || 'world') + '!');
+    }
    
 });
 myAppModule.controller('chooseController',function($scope){
