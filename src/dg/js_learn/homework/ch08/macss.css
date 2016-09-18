@@ -1,7 +1,7 @@
 @CHARSET "UTF-8";
 
 .redBall{
-	background-image:url('/MaWeb/images/redball.png');
+	background-image:url('images/redball.png');
 	color:white;
 	background-repeat:no-repeat;
    	padding-left:8px;
@@ -10,7 +10,7 @@
     padding-bottom:6px;
 }
 .blueBall{
-	background-image:url('/MaWeb/images/blueball.png');
+	background-image:url('images/blueball.png');
 	color:white;
 	background-repeat:no-repeat;
 	padding-left:8px;
@@ -19,7 +19,7 @@
    	padding-bottom:6px;
 }
 .whiteBall{
-	background-image:url('/MaWeb/images/whiteball.png');
+	background-image:url('images/whiteball.png');
 	color:black;
 	background-repeat:no-repeat;
 	padding-left:8px;
