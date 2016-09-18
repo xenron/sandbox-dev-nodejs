@@ -4,7 +4,7 @@
 
 //定义模块
 var myAppModule = angular.module('myApp',[]);
-app.directive('sayHello',function(){
+myAppModule.directive('sayHello',function(){
                    return {
                             restrict : 'E',
                             templateUrl:'template.htm',
