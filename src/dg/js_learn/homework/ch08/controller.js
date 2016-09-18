@@ -37,7 +37,16 @@ myAppModule.controller('historyController',function($scope,$http){
 	   }
    };
    $scope.hello = function(name) {
-        alert('Hello ' + (name || 'world') + '!');
+        $scope.redList = [];
+        $scope.blueList = [];
+        if (name=="red") {
+		    for(var i = 0;i<33;i++) {
+		        $scope.redList[i] = i+1;
+            };
+        } else if (name=="blue") {
+            for(var i = 0;i<16;i++){
+	            $scope.blueList[i] = i+1;
+            };
     }
    
 });
