@@ -91,8 +91,8 @@ function ChooseController($scope){
 	  $scope.$watch('whichBall',watchFn);
 }
 function indexRouteConfig($routeProvider){
-	$routeProvider.when('/view/history',{controller:HistoryController,templateUrl:'/MaWeb/template/history.htm'})
-	.when('/view/choose',{controller:ChooseController,templateUrl:'/MaWeb/template/choose.htm'})
+	$routeProvider.when('/view/history',{controller:HistoryController,templateUrl:'/history.htm'})
+	.when('/view/choose',{controller:ChooseController,templateUrl:'/choose.htm'})
 	.otherwise({rediretTo:'/'});
 }
 myAppModule.config(indexRouteConfig);
