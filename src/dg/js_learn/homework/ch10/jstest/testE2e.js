@@ -17,5 +17,4 @@ describe('test search ctr',function(){
 	   input('query').enter('sss');
 	   expect(repeater('ul li').count()).toBe(0);
   });
-		
 });

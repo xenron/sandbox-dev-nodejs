@@ -40,4 +40,4 @@ app.directive('notepad',function(){
 		   });
 		}
 	}
-})
+});
