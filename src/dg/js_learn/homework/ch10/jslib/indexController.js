@@ -4,13 +4,8 @@
 
 //定义模块
 var myAppModule = angular.module('myApp',[]);
-myAppModule.directive('sayHello',function(){
-                   return {
-                            restrict : 'E',
-                            templateUrl:'template.htm',
-                   };
-         })
-myAppModule.controller('historyController',function($scope,$http){
+
+function HistoryController($scope,$http){
 	var url = '';
 	/*$http.get(url).success(function(data,status,headers,config){
 		$scope.historyList = data;
@@ -42,29 +37,13 @@ myAppModule.controller('historyController',function($scope,$http){
 		  
 	   }
    };
-   $scope.hello = function(name) {
-        $scope.redList = [];
-        $scope.blueList = [];
-        if (name=="red") {
-		    for(var i = 0;i<33;i++) {
-		        $scope.redList[i] = i+1;
-            };
-        } else if (name=="blue") {
-            for(var i = 0;i<16;i++){
-	            $scope.blueList[i] = i+1;
-            };
-        }
-    };
-   
-});
-myAppModule.controller('chooseController',function($scope){
-	  $scope.balls = {};
+}
+function ChooseController($scope){
+	$scope.balls = {};
 	  $scope.next = 1;
 	  $scope.whichBall = '';
-	  $scope.isStart = false;
 	  $scope.start =function(){
 		  $scope.balls = {};
-		  $scope.isStart = true ;
 		  $scope.next =1;
 		  $scope.whichBall = 'redBall'+ $scope.next;
 		  $scope.next++;
@@ -90,9 +69,6 @@ myAppModule.controller('chooseController',function($scope){
 			  if($scope.isReady>=time){
 					 clearInterval($scope.intval);
 					 $scope.whichBall = 'redBall'+$scope.next;
-					 if($scope.next==8){
-						 $scope.isStart = false;
-					 }
 					 $scope.next++;
 			  }
 		  }
@@ -103,15 +79,20 @@ myAppModule.controller('chooseController',function($scope){
 		  updateball();
 	  }
 	  function watchFn(newValue,oldValue,scope){
-         if(newValue!=''){
-        	 if(newValue.substring(7)<7){
-        		 calcBall(newValue,33,2000);
-        	 }else if (newValue.substring(7)==7){
-        		 calcBall(newValue,16,2000);
-        	 }
-        	
-         }
+       if(newValue!=''){
+      	 if(newValue.substring(7)<7){
+      		 calcBall(newValue,33,2000);
+      	 }else if (newValue.substring(7)==7){
+      		 calcBall(newValue,17,2000);
+      	 }
+      	
+       }
 	  }
-	  //deepWatch
 	  $scope.$watch('whichBall',watchFn);
-});
+}
+function indexRouteConfig($routeProvider){
+	$routeProvider.when('/view/history',{controller:HistoryController,templateUrl:'/MaWeb/template/history.htm'})
+	.when('/view/choose',{controller:ChooseController,templateUrl:'/MaWeb/template/choose.htm'})
+	.otherwise({rediretTo:'/'});
+}
+myAppModule.config(indexRouteConfig);

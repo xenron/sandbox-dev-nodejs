@@ -4,17 +4,25 @@
 
 //定义模块
 var myAppModule = angular.module('myApp',[]);
-
-function HistoryController($scope,$http){
-	var url = '';
-	/*$http.get(url).success(function(data,status,headers,config){
-		$scope.historyList = data;
-	})*/
-	$scope.histroyList =[
-	    {openDate:'20160921',firstBall:2,sencondBall:3,thirdBall:6,forthBall:16,fifthBall:17,sixBall:26,blueBall:8},
-	    {openDate:'20160915',firstBall:4,sencondBall:5,thirdBall:9,forthBall:16,fifthBall:26,sixBall:31,blueBall:5},
-	    {openDate:'20160913',firstBall:4,sencondBall:9,thirdBall:13,forthBall:18,fifthBall:20,sixBall:28,blueBall:10}
-	   ];
+myAppModule.controller('historyController',function($scope,$http){
+	var url = '/MaWeb/data/data.txt';
+	$http.get(url).success(function(data,status,headers,config){
+		var dataArr = data.split('\n');
+		$scope.histroyList = [];
+		for(var i = 0;i<dataArr.length;i++){
+			var ball = dataArr[i].split(',');
+			var item = {};
+			item['firstBall']=ball[0];
+			item['sencondBall']=ball[1];
+			item['thirdBall']=ball[2];
+			item['fifthBall']=ball[3];
+			item['fifthBall']=ball[4];
+			item['sixBall']=ball[5];
+			item['blueBall']=ball[6];
+			$scope.histroyList[i]=item;
+		}		
+	});
+	
    $scope.redList = [];
    for(var i = 0;i<33;i++){
 	   $scope.redList[i] = i+1;
@@ -37,13 +45,16 @@ function HistoryController($scope,$http){
 		  
 	   }
    };
-}
-function ChooseController($scope){
-	$scope.balls = {};
+   
+});
+myAppModule.controller('chooseController',function($scope,$interval){
+	  $scope.balls = {};
 	  $scope.next = 1;
 	  $scope.whichBall = '';
+	  $scope.isStart = false;
 	  $scope.start =function(){
 		  $scope.balls = {};
+		  $scope.isStart = true ;
 		  $scope.next =1;
 		  $scope.whichBall = 'redBall'+ $scope.next;
 		  $scope.next++;
@@ -67,32 +78,30 @@ function ChooseController($scope){
 				  $scope.balls[ball] = num;
 			  }
 			  if($scope.isReady>=time){
-					 clearInterval($scope.intval);
+				  $interval.cancel($scope.intval);
 					 $scope.whichBall = 'redBall'+$scope.next;
+					 if($scope.next==8){
+						 $scope.isStart = false;
+					 }
 					 $scope.next++;
 			  }
 		  }
-		  $scope.intval = setInterval(function(){
-			 $scope.$apply(updateball);
+		  $scope.intval = $interval(function(){
+			  updateball();
 			 $scope.isReady =$scope.isReady+100;
 		  },100);
 		  updateball();
 	  }
 	  function watchFn(newValue,oldValue,scope){
-       if(newValue!=''){
-      	 if(newValue.substring(7)<7){
-      		 calcBall(newValue,33,2000);
-      	 }else if (newValue.substring(7)==7){
-      		 calcBall(newValue,17,2000);
-      	 }
-      	
-       }
+         if(newValue!=''){
+        	 if(newValue.substring(7)<7){
+        		 calcBall(newValue,33,2000);
+        	 }else if (newValue.substring(7)==7){
+        		 calcBall(newValue,16,2000);
+        	 }
+        	
+         }
 	  }
+	  //deepWatch
 	  $scope.$watch('whichBall',watchFn);
-}
-function indexRouteConfig($routeProvider){
-	$routeProvider.when('/view/history',{controller:HistoryController,templateUrl:'/history.htm'})
-	.when('/view/choose',{controller:ChooseController,templateUrl:'/choose.htm'})
-	.otherwise({rediretTo:'/'});
-}
-myAppModule.config(indexRouteConfig);
+});
