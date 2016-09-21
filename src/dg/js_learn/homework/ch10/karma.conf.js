@@ -8,19 +8,23 @@ module.exports = function(config) {
       'bower_components/angular/angular.js',
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-mocks/angular-mocks.js',
-      'components/**/*.js',
-      'view*/**/*.js'
+      //'components/**/*.js',
+      //'view*/**/*.js'
+      'notepad/**/*.js'
+      //'jstest/test'
     ],
 
     autoWatch: true,
 
     frameworks: ['jasmine'],
 
-    browsers: ['Chrome'],
+    browsers: ['Safari'],
+    // browsers: ['Chrome'],
 
     plugins: [
       'karma-chrome-launcher',
       'karma-firefox-launcher',
+      'karma-safari-launcher',
       'karma-jasmine',
       'karma-junit-reporter'
     ],
