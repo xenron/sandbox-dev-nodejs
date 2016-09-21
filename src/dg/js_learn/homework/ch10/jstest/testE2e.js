@@ -4,7 +4,7 @@
 
 describe('test search ctr',function(){
 	beforeEach(function(){
-		browser().navigateTo('/TestAngular/searchText.jsp');
+		browser().navigateTo('/searchText.html');
 	});
 	it('should filter result',function(){
 	   input('query').enter('test1');
