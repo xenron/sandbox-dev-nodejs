@@ -4,7 +4,7 @@
 
 describe('test search ctr',function(){
 	beforeEach(function(){
-		browser().navigateTo('/searchText.html');
+		browser().navigateTo('/app/searchText.html');
 	});
 	it('should filter result',function(){
 	   input('query').enter('test');
