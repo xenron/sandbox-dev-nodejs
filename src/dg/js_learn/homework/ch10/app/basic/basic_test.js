@@ -2,7 +2,7 @@
 
 describe('myAppBasic module', function() {
 
-  var element1;
+  var element;
   var $_scope;
   var $_compile;
   var template;
