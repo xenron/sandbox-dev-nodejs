@@ -2,22 +2,6 @@
  * 
  */
 var app = angular.module('myAppNotepad',[]);
-app.directive('ehSimple2',function(){
-	return function(scope, element) {
-		element.addClass("plain");
-	}
-});
-app.directive('ehSimple3',function(){
-	return {
-		scope:{},
-		link:linkFn
-	}
-	function linkFn(scope, element) {
-		element.bind("click", function() {
-			scope.clicked=true;
-		})
-	}
-});
 
 app.directive("ngDestroy", function(){                                                                                                                                                                         
         return {                                                                                                                                                                                             

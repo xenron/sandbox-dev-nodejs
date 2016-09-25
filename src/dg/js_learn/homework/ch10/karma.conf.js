@@ -12,10 +12,10 @@ module.exports = function(config) {
       'bower_components/angular-scenario/angular-scenario.js',
       //'components/**/*.js',
       //'view*/**/*.js'
-      // app
-      'notepad/notepad.js',
-      // test
-      'notepad/notepad_test.js',
+      
+      // basic
+      'basic/basic.js',
+      'basic/basic_test.js',
       //'jstest/test'
       // templates
       // 'notepad/template.htm'
