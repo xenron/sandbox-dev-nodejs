@@ -5,6 +5,7 @@ app.directive('classDirective',function(){
 		element.addClass("plain");
 	}
 });
+
 app.directive('clickDirective',function(){
 	return {
 		scope:{},
@@ -15,4 +16,12 @@ app.directive('clickDirective',function(){
 			scope.clicked=true;
 		})
 	}
+});
+
+app.directive('aGreatEye', function () {
+    return {
+        restrict: 'E',
+        replace: true,
+        template: '<h1>lidless, wreathed in flame, {{1 + 1}} times</h1>'
+    };
 });

@@ -21,6 +21,14 @@ module.exports = function(config) {
       'controller/controller.js',
       'controller/controller_test.js',
       
+      // directive
+      'directive/directive.js',
+      'directive/directive_test.js',
+      
+      // filter
+      'filter/filter.js',
+      'filter/filter_test.js',
+      
       //'jstest/test'
       // templates
       // 'notepad/template.htm'
