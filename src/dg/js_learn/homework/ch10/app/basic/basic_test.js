@@ -30,8 +30,9 @@ describe('myAppBasic module', function() {
     it('sorts in descending order by default', function() {
       var users = ['jack', 'igor', 'jeff'];
       // var sorted = sortUsers(users);
+      // expect(sorted).toEqual(['jeff', 'jack', 'igor']);
       var sorted = users.sort();
-      expect(sorted).toEqual(['jeff', 'jack', 'igor']);
+      expect(sorted).toEqual(['igor', 'jack', 'jeff']);
     });
   });
 

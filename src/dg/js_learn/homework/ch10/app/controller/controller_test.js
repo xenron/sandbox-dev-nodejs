@@ -22,7 +22,7 @@ describe('myAppController module', function() {
     it('should be defined ....', inject(function($controller) {
       //spec body
       var view1Ctrl = $controller('myAppControllerCtrl01');
-    expect(view1Ctrl).toBeDefined();
+      expect(view1Ctrl).toBeDefined();
     }));
   });
   
