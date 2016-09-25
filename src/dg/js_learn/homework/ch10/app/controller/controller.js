@@ -1,7 +1,7 @@
 'use strict';
 
-describe('test', function() {
-  it('should ....', function() {
-    expect(true).toBe(true);
-  });
-});
+var app = angular.module('myAppController',[]);
+
+app.controller('myAppControllerCtrl01', [function() {
+
+}]);

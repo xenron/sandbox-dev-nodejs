@@ -1,7 +1,13 @@
 'use strict';
 
-describe('test', function() {
-  it('should ....', function() {
-    expect(true).toBe(true);
-  });
+describe('myAppController module', function() {
+
+  beforeEach(module('myAppController'));
+  
+  it('should be defined ....', inject(function($controller) {
+    //spec body
+    var view1Ctrl = $controller('myAppControllerCtrl01');
+    expect(view1Ctrl).toBeDefined();
+  }));
+
 });
