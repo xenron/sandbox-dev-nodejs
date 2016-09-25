@@ -16,6 +16,11 @@ module.exports = function(config) {
       // basic
       'basic/basic.js',
       'basic/basic_test.js',
+      
+      // controller
+      'controller/controller.js',
+      'controller/controller_test.js',
+      
       //'jstest/test'
       // templates
       // 'notepad/template.htm'
