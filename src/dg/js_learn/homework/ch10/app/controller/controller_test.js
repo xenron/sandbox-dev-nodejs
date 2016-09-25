@@ -12,19 +12,19 @@ describe('myAppController module', function() {
   }));
 
   
-  it('should be defined ...', inject(function($controller) {
-    //spec body
-    var view1Ctrl = $controller('myAppControllerCtrl01');
-    expect(view1Ctrl).toBeDefined();
-  }));
+  // it('should be defined ...', inject(function($controller) {
+  //   //spec body
+  //   var view1Ctrl = $controller('myAppControllerCtrl01');
+  //   expect(view1Ctrl).toBeDefined();
+  // }));
   
-  describe('myAppController controller', function(){
-    it('should be defined ....', inject(function($controller) {
-      //spec body
-      var view1Ctrl = $controller('myAppControllerCtrl01');
-      expect(view1Ctrl).toBeDefined();
-    }));
-  });
+  // describe('myAppController controller', function(){
+  //   it('should be defined ....', inject(function($controller) {
+  //     //spec body
+  //     var view1Ctrl = $controller('myAppControllerCtrl01');
+  //     expect(view1Ctrl).toBeDefined();
+  //   }));
+  // });
   
   describe('$scope.grade', function() {
     it('sets the strength to "strong" if the password length is >8 chars', function() {
