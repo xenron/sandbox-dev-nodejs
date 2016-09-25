@@ -1,13 +1,45 @@
 /**
  * 
  */
-var app = angular.module('myApp.notepad',[]);
+var app = angular.module('myAppNotepad',[]);
+app.directive('ehSimple2',function(){
+	return function(scope, element) {
+		element.addClass("plain");
+	}
+});
+app.directive('ehSimple3',function(){
+	return {
+		scope:{},
+		link:linkFn
+	}
+	function linkFn(scope, element) {
+		element.bind("click", function() {
+			scope.clicked=true;
+		})
+	}
+});
+
+app.directive("ngDestroy", function(){                                                                                                                                                                         
+        return {                                                                                                                                                                                             
+            restrict: "C",                                                                                                                                                                                   
+            replace: true,                                                                                                                                                                                   
+            link: function(scope, elem, attrs) {
+                var span = angular.element("<span>x</span>");
+                    elem.append(span);
+                    span.on("click", function(){
+                    elem.remove();
+                });
+            }
+         };
+  });
+
 app.directive('notepad',function(){
 	return {
 		restrict:'AE',
 		scope:{},
-		templateUrl:'template.htm',
+		// templateUrl:'template.htm',
 		link:function(scope,elem,attrs){
+			scope.editMode = false;
 			scope.restore = function(){
 				scope.editMode = false;
 				scope.index = -1;
@@ -38,6 +70,10 @@ app.directive('notepad',function(){
 		   editor.bind('keyup keydown',function(){
 			   scope.noteText = editor.text().trim();
 		   });
+
+		   var span = angular.element("<span><a href='#' ng-click='openEditor()'  ng-show='!editMode'>Add Note</a></span>");
+		   elem.append(span);
+
 		}
 	}
 });

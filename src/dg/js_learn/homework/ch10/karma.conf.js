@@ -5,21 +5,29 @@ module.exports = function(config) {
     basePath: './app',
 
     files: [
+      // library
       'bower_components/angular/angular.js',
-      'bower_components/angular-route/angular-route.js',
       'bower_components/angular-mocks/angular-mocks.js',
+      'bower_components/angular-route/angular-route.js',
+      'bower_components/angular-scenario/angular-scenario.js',
       //'components/**/*.js',
       //'view*/**/*.js'
-      'notepad/**/*.js'
+      // app
+      'notepad/notepad.js',
+      // test
+      'notepad/notepad_test.js',
       //'jstest/test'
+      // templates
+      // 'notepad/template.htm'
     ],
 
     autoWatch: true,
 
     frameworks: ['jasmine'],
 
-    browsers: ['Safari'],
+    // browsers: ['Safari'],
     // browsers: ['Chrome'],
+    browsers: ['Firefox'],
 
     plugins: [
       'karma-chrome-launcher',
