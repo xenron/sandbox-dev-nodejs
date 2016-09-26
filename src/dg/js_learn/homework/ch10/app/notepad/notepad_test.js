@@ -18,14 +18,14 @@ describe('myAppNotepad module', function() {
   // load the templates
   beforeEach(module('notepad/tpl/template.html'));
 
-  beforeEach(inject(function($rootScope, $compile) {
-    // we might move this tpl into an html file as well...
-    elm = angular.element('<notepad />');
+  // beforeEach(inject(function($rootScope, $compile) {
+  //   // we might move this tpl into an html file as well...
+  //   elm = angular.element('<notepad />');
 
-    scope = $rootScope;
-    $compile(elm)(scope);
-    scope.$digest();
-  }));
+  //   scope = $rootScope;
+  //   $compile(elm)(scope);
+  //   scope.$digest();
+  // }));
 
   it('should ....', function() {
     expect(true).toBe(true);
