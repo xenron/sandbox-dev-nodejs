@@ -83,14 +83,14 @@ describe('tabs', function() {
     // second title should be active
     // expect(titles.eq(0)).not.toHaveClass('active');
     // expect(titles.eq(1)).toHaveClass('active');
-    expect(titles.eq(0).hasClass('active')).toBe(true);
-    expect(titles.eq(1).hasClass('active')).toBe(false);
+    expect(titles.eq(0).hasClass('active')).toBe(false);
+    expect(titles.eq(1).hasClass('active')).toBe(true);
 
     // second content should be active
     // expect(contents.eq(0)).not.toHaveClass('active');
     // expect(contents.eq(1)).toHaveClass('active');
-    expect(titles.eq(0).hasClass('active')).toBe(true);
-    expect(titles.eq(1).hasClass('active')).toBe(false);
+    expect(titles.eq(0).hasClass('active')).toBe(false);
+    expect(titles.eq(1).hasClass('active')).toBe(true);
   });
 });
 
