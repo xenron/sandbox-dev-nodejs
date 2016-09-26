@@ -5,7 +5,7 @@ app.directive('notepad',function(){
 	return {
 		restrict:'AE',
 		scope:{},
-		templateUrl:'notepad/tpl/template.htm',
+		templateUrl:'notepad/tpl/template.html',
 		link:function(scope,elem,attrs){
 			scope.editMode = false;
 			scope.restore = function(){

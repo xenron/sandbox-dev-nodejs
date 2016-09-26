@@ -41,7 +41,7 @@ module.exports = function(config) {
       // notepad
       'notepad/notepad.js',
       'notepad/notepad_test.js',
-      'notepad/tpl/template.htm'
+      'notepad/tpl/template.html'
       
       //'jstest/test'
       // templates
@@ -54,12 +54,14 @@ module.exports = function(config) {
 
     // browsers: ['Safari'],
     // browsers: ['Chrome'],
-    browsers: ['Firefox'],
+    // browsers: ['Firefox'],
+    browsers: [ 'PhantomJS' ],
 
     plugins: [
       'karma-chrome-launcher',
       'karma-firefox-launcher',
       'karma-safari-launcher',
+      'karma-phantomjs-launcher',
       'karma-jasmine',
       'karma-junit-reporter',
       'karma-ng-html2js-preprocessor'
