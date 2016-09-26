@@ -23,7 +23,7 @@ tabs.directive('tabs', function() {
     transclude: true,
     scope: {},
     controller: TabsController,
-    templateUrl: 'tpl/tabs.html',
+    templateUrl: 'template1/tabs.html',
     replace: true
   };
 });
@@ -38,7 +38,7 @@ tabs.directive('pane', function() {
     link: function(scope, element, attrs, tabsCtrl) {
       tabsCtrl.addPane(scope);
     },
-    templateUrl: 'tpl/pane.html',
+    templateUrl: 'template1/pane.html',
     replace: true
   };
 });
