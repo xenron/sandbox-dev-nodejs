@@ -29,6 +29,14 @@ module.exports = function(config) {
       'filter/filter.js',
       'filter/filter_test.js',
       
+      // template1
+      'template1/tabs.js',
+      'template1/app.js',
+      'template1/tabsSpec.js',
+      //'template1/helpers.js',
+      'template1/tabs.html',
+      'template1/pane.html',
+      
       //'jstest/test'
       // templates
       // 'notepad/template.htm'
@@ -53,7 +61,12 @@ module.exports = function(config) {
     junitReporter: {
       outputFile: 'test_out/unit.xml',
       suite: 'unit'
-    }
+    },
+
+    // generate js files from html templates
+    preprocessors: {
+      'template1/*.html': 'ng-html2js'
+    },
 
   });
 };
