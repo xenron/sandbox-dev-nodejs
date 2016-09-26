@@ -56,16 +56,20 @@ describe('tabs', function() {
   it('should set active class on title', function() {
     var titles = elm.find('ul.nav-tabs li');
 
-    expect(titles.eq(0)).toHaveClass('active');
-    expect(titles.eq(1)).not.toHaveClass('active');
+    // expect(titles.eq(0)).toHaveClass('active');
+    // expect(titles.eq(1)).not.toHaveClass('active');
+    expect(titles.eq(0).hasClass('active')).toBe(true);
+    expect(titles.eq(1).hasClass('active')).toBe(false);
   });
 
 
   it('should set active class on content', function() {
     var contents = elm.find('div.tab-content div.tab-pane');
 
-    expect(contents.eq(0)).toHaveClass('active');
-    expect(contents.eq(1)).not.toHaveClass('active');
+    // expect(contents.eq(0)).toHaveClass('active');
+    // expect(contents.eq(1)).not.toHaveClass('active');
+    expect(titles.eq(0).hasClass('active')).toBe(true);
+    expect(titles.eq(1).hasClass('active')).toBe(false);
   });
 
 
@@ -77,12 +81,16 @@ describe('tabs', function() {
     titles.eq(1).find('a').click();
 
     // second title should be active
-    expect(titles.eq(0)).not.toHaveClass('active');
-    expect(titles.eq(1)).toHaveClass('active');
+    // expect(titles.eq(0)).not.toHaveClass('active');
+    // expect(titles.eq(1)).toHaveClass('active');
+    expect(titles.eq(0).hasClass('active')).toBe(true);
+    expect(titles.eq(1).hasClass('active')).toBe(false);
 
     // second content should be active
-    expect(contents.eq(0)).not.toHaveClass('active');
-    expect(contents.eq(1)).toHaveClass('active');
+    // expect(contents.eq(0)).not.toHaveClass('active');
+    // expect(contents.eq(1)).toHaveClass('active');
+    expect(titles.eq(0).hasClass('active')).toBe(true);
+    expect(titles.eq(1).hasClass('active')).toBe(false);
   });
 });
 
