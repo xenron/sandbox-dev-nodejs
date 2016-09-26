@@ -68,8 +68,8 @@ describe('tabs', function() {
 
     // expect(contents.eq(0)).toHaveClass('active');
     // expect(contents.eq(1)).not.toHaveClass('active');
-    expect(titles.eq(0).hasClass('active')).toBe(true);
-    expect(titles.eq(1).hasClass('active')).toBe(false);
+    expect(contents.eq(0).hasClass('active')).toBe(true);
+    expect(contents.eq(1).hasClass('active')).toBe(false);
   });
 
 
