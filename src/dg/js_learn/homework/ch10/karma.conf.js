@@ -38,6 +38,11 @@ module.exports = function(config) {
       'template1/tabs.html',
       'template1/pane.html',
       
+      // notepad
+      'notepad/notepad.js',
+      'notepad/notepad_test.js',
+      'notepad/tpl/template.htm'
+      
       //'jstest/test'
       // templates
       // 'notepad/template.htm'
