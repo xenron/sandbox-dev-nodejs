@@ -22,12 +22,12 @@ module.exports = function(config) {
       'controller/controller_test.js',
       
       // directive
-      // 'directive/directive.js',
-      // 'directive/directive_test.js',
+      'directive/directive.js',
+      'directive/directive_test.js',
       
       // filter
-      // 'filter/filter.js',
-      // 'filter/filter_test.js',
+      'filter/filter.js',
+      'filter/filter_test.js',
       
       //'jstest/test'
       // templates

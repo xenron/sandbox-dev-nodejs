@@ -5,7 +5,7 @@ describe('Unit testing great quotes', function() {
       $rootScope;
 
   // Load the myApp module, which contains the directive
-  beforeEach(module('myApp'));
+  beforeEach(module('myAppDirective'));
 
   // Store references to $rootScope and $compile
   // so they are available to all tests in this describe block

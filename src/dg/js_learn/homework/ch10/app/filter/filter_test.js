@@ -3,6 +3,8 @@
 describe('length filter', function() {
 
   var $filter;
+  
+  beforeEach(module('myAppFilter'));
 
   beforeEach(inject(function(_$filter_){
     $filter = _$filter_;

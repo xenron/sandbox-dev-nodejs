@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('myAppController',[]);
+var app = angular.module('myAppFilter',[]);
 
 app.filter('length', function() {
   return function(text) {
