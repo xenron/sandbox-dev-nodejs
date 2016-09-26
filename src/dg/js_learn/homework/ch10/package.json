@@ -15,6 +15,7 @@
     "karma-safari-launcher": "^1.0.0",
     "karma-jasmine": "^0.3.8",
     "karma-junit-reporter": "^0.4.1",
+    "karma-ng-html2js-preprocessor": "*",
     "protractor": "^3.2.2"
   },
   "scripts": {
