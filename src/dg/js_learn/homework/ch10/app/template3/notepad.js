@@ -1,6 +1,6 @@
-var tabs = angular.module('myAppNotepad', []);
+var app = angular.module('myAppNotepad', []);
 
-tabs.directive('notepad', function() {
+app.directive('notepad', function() {
   return {
     restrict: 'AE',
     transclude: true,

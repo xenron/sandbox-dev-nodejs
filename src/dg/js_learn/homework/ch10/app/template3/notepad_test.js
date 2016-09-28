@@ -1,4 +1,4 @@
-describe('tabs', function() {
+describe('myAppNotepad', function() {
   var elm, scope;
 
   // load the tabs code
