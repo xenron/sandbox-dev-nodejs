@@ -8,7 +8,6 @@ app.directive('notepad', function() {
     templateUrl: 'template3/template.html',
     replace: true,
     link:function(scope,elem,attrs){
-			scope.editMode = false;
 			scope.restore = function(){
 				scope.editMode = false;
 				scope.index = -1;
