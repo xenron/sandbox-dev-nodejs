@@ -41,7 +41,7 @@ module.exports = function(config) {
       // template2
       'template2/tabs.js',
       'template2/tabsSpec.js',
-      'template2/tabs.html'
+      'template2/tabs.html',
       
       // template3
       'template3/tabs.js',
