@@ -79,7 +79,8 @@ module.exports = function(config) {
 
     // generate js files from html templates
     preprocessors: {
-      'template1/*.html': 'ng-html2js'
+      'template1/*.html': 'ng-html2js',
+      'template2/*.html': 'ng-html2js'
     },
 
   });
