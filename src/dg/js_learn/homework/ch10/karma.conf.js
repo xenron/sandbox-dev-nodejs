@@ -44,9 +44,12 @@ module.exports = function(config) {
       'template2/tabs.html',
       
       // template3
-      'template3/tabs.js',
-      'template3/tabsSpec.js',
-      'template3/tabs.html'
+      // 'template3/tabs.js',
+      // 'template3/tabsSpec.js',
+      // 'template3/tabs.html',
+      'template3/notepad.js',
+      'template3/notepad_test.js',
+      'template3/template.html',
       
       // notepad
       // 'notepad/notepad.js',
@@ -86,6 +89,7 @@ module.exports = function(config) {
     preprocessors: {
       'template1/*.html': 'ng-html2js',
       'template2/*.html': 'ng-html2js',
+      'template3/*.htm': 'ng-html2js',
       'template3/*.html': 'ng-html2js'
     },
 

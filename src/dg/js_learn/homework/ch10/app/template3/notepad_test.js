@@ -2,15 +2,14 @@ describe('tabs', function() {
   var elm, scope;
 
   // load the tabs code
-  beforeEach(module('notepad'));
+  beforeEach(module('myAppNotepad'));
 
   // load the templates
-  beforeEach(module('template3/tabs.html'));
+  beforeEach(module('template3/template.html'));
 
   beforeEach(inject(function($rootScope, $compile) {
     // we might move this tpl into an html file as well...
-    elm = angular.element('<div></div>');
-
+    elm = angular.element('<notepad></notepad>');
     scope = $rootScope;
     $compile(elm)(scope);
     scope.$digest();
