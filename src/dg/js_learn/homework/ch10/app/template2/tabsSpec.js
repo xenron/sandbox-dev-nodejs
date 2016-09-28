@@ -28,21 +28,21 @@ describe('notepad', function() {
     // console.log(elm.find('a').length);
     // console.log(elm.find('a'));
 
-    scope.$apply(function() {
-      scope.notes = [];
-      var note ={};
-      note.title = "test_title";
-      note.content = "test_content";
-      note.id = 1;
-      scope.notes[note.id]=note;
-    });
+    // scope.$apply(function() {
+    //   scope.notes = [];
+    //   var note ={};
+    //   note.title = "test_title";
+    //   note.content = "test_content";
+    //   note.id = 1;
+    //   scope.notes[note.id]=note;
+    // });
 
-    elm = angular.element('<newelement></newelement>');
-    compile(elm)(scope);
-    scope.$digest();
+    // elm = angular.element('<newelement></newelement>');
+    // compile(elm)(scope);
+    // scope.$digest();
 
-    console.log(elm.find('ul li a').length);
-    console.log(elm.find('a').length);
+    // console.log(elm.find('ul li a').length);
+    // console.log(elm.find('a').length);
     // console.log(elm.find('a'));
     expect(true).toBe(true);
 
