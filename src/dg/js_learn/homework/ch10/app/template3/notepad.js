@@ -15,12 +15,12 @@ app.directive('notepad', function () {
             };
             scope.openEditor = function (index) {
                 scope.editMode = true;
-                if (index !== undefined) {
-                    scope.noteText = scope.notes[index].content;
-                    scope.index = index;
-                } else {
-                    scope.noteText = undefined;
-                }
+                // if (index !== undefined) {
+                //     scope.noteText = scope.notes[index].content;
+                //     scope.index = index;
+                // } else {
+                //     scope.noteText = undefined;
+                // }
             };
             scope.save = function () {
                 if (scope.noteText !== '' && scope.noteText !== undefined) {
