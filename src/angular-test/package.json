@@ -1,9 +1,9 @@
 {
-  "name": "ch10",
+  "name": "angular-test",
   "private": true,
   "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "description": "A test sample project for AngularJS",
+  "repository": "https://github.com/xenron/",
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.7.7",
