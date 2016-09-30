@@ -14,42 +14,42 @@ module.exports = function (config) {
             //'components/**/*.js',
             //'view*/**/*.js'
 
-            // basic
-            'basic/basic.js',
-            'basic/basic_test.js',
-
-            // controller
-            'controller/controller.js',
-            'controller/controller_test.js',
-
-            // directive
-            'directive/directive.js',
-            'directive/directive_test.js',
-
-            // filter
-            'filter/filter.js',
-            'filter/filter_test.js',
-
-            // template1
-            'template1/tabs.js',
-            'template1/app.js',
-            'template1/tabsSpec.js',
-            //'template1/helpers.js',
-            'template1/tabs.html',
-            'template1/pane.html',
-
-            // template2
-            'template2/tabs.js',
-            'template2/tabsSpec.js',
-            'template2/tabs.html',
-
-            // template3
-            // 'template3/tabs.js',
-            // 'template3/tabsSpec.js',
-            // 'template3/tabs.html',
-            'template3/notepad.js',
-            'template3/notepad_test.js',
-            'template3/template.html',
+            // // basic
+            // 'basic/basic.js',
+            // 'basic/basic_test.js',
+            //
+            // // controller
+            // 'controller/controller.js',
+            // 'controller/controller_test.js',
+            //
+            // // directive
+            // 'directive/basic/template.js',
+            // 'directive/basic/template_test.js',
+            //
+            // // filter
+            // 'filter/filter.js',
+            // 'filter/filter_test.js',
+            //
+            // // template1
+            // 'backup/template1/tabs.js',
+            // 'backup/template1/app.js',
+            // 'backup/template1/tabsSpec.js',
+            // //'template1/helpers.js',
+            // 'backup/template1/tabs.html',
+            // 'backup/template1/pane.html',
+            //
+            // // template2
+            // 'backup/template2/tabs.js',
+            // 'backup/template2/tabsSpec.js',
+            // 'backup/template2/tabs.html',
+            //
+            // // template3
+            // // 'template3/tabs.js',
+            // // 'template3/tabsSpec.js',
+            // // 'template3/tabs.html',
+            'backup/template3/notepad.js',
+            'backup/template3/notepad_test.js',
+            'backup/template3/template.html',
 
             // notepad
             // 'notepad/notepad.js',
@@ -87,10 +87,10 @@ module.exports = function (config) {
 
         // generate js files from html templates
         preprocessors: {
-            'template1/*.html': 'ng-html2js',
-            'template2/*.html': 'ng-html2js',
-            'template3/*.htm': 'ng-html2js',
-            'template3/*.html': 'ng-html2js'
+            // 'template1/*.html': 'ng-html2js',
+            // 'template2/*.html': 'ng-html2js',
+            // 'template3/*.htm': 'ng-html2js',
+            'backup/template3/*.html': 'ng-html2js'
         },
 
     });

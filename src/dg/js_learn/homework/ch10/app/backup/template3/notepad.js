@@ -4,7 +4,7 @@ app.directive('notepad', function () {
     return {
         restrict: 'AE',
         transclude: true,
-        scope: {},
+        // scope: {},
         templateUrl: 'template3/template.html',
         replace: true,
         link: function (scope, elem, attrs) {
