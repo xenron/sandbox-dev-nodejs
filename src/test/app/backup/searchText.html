@@ -1,0 +1,21 @@
+<html ng-app ='app'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="/jslib/angular.js"></script>
+<script type="text/javascript" src="/app/backup/searchTextController.js"></script>
+
+<title>searchText</title>
+</head>
+<body >
+    <div ng-controller= 'listController'>
+		  <div>
+		        search : <input ng-model ='query'>
+		  </div>
+	   <div>
+	      <ul>
+	        <li ng-repeat ='item in names|filter:query'>{{item.name}}</li>
+	      </ul>
+	   </div>
+    </div>
+</body>
+</html>
