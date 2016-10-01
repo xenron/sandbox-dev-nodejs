@@ -1,6 +1,6 @@
 'use strict';
 
-describe('myAppBasic module', function() {
+describe('appBasic module', function() {
 
   var element;
   var $_scope;
@@ -8,15 +8,16 @@ describe('myAppBasic module', function() {
   var template;
   
   beforeEach(function() {
-    module('myAppBasic');
+    module('appBasic');
   });
   beforeEach(inject(function($compile, $rootScope, $templateCache) {
     $_scope = $rootScope;
     $_compile = $compile;
   }));
 
-  it('dummy test ...', function() {
+  it('Should be true ...', function() {
     expect(true).toBe(true);
+    expect(true).toBeTruthy();
   });
 
   it('should equal 4', function() {

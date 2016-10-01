@@ -19,8 +19,8 @@ module.exports = function (config) {
             'basic/basic_test.js',
 
             // controller
-            // 'controller/controller.js',
-            // 'controller/controller_test.js',
+            'app/controller/password-controller.js',
+            'app/controller/password-controller-spec.js',
             //
             // // directive
             // 'app/directive/basic/template.js',
@@ -77,7 +77,8 @@ module.exports = function (config) {
             'karma-phantomjs-launcher',
             'karma-jasmine',
             'karma-junit-reporter',
-            'karma-ng-html2js-preprocessor'
+            'karma-coverage',
+            'karma-ng-html2js-preprocessor',
         ],
 
         junitReporter: {
@@ -87,11 +88,20 @@ module.exports = function (config) {
 
         // generate js files from html templates
         preprocessors: {
+            // coverage
+            'basic/basic.js': ['coverage'],
             'template1/*.html': 'ng-html2js',
             'template2/*.html': 'ng-html2js',
             'template3/*.htm': 'ng-html2js',
             'template3/*.html': 'ng-html2js'
         },
+
+        reporters: ['progress','coverage'],
+        // preprocessors : {'*.js': 'coverage'},
+        coverageReporter: {
+            type : 'html',
+            dir : '../coverage/'
+        }
 
     });
 };
