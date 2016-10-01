@@ -109,19 +109,21 @@ module.exports = function (config) {
 
         junitReporter: {
             outputFile: 'test_out/unit.xml',
-            suite: 'unit'
+            suite: 'unit',
         },
 
         // generate js files from html templates
         preprocessors: {
             // coverage
-            'basic/basic.js': ['coverage'],
-            'controller/controller.js': ['coverage'],
-            'filter/filter.js': ['coverage'],
-            'factory/desserts-factory.js': ['coverage'],
-            'directive/stateful-directive.js': ['coverage'],
             // '**/*.html': ['ng-html2js'],
+            'basic/basic.js': ['coverage'],
+            'controller/pie-controller.js': ['coverage'],
+            'directive/stateful-directive.js': ['coverage'],
+            'directive/text-and-sub-directive.js': ['coverage'],
             'directive/text-and-sub-directive.html': ['ng-html2js'],
+            'factory/desserts-factory.js': ['coverage'],
+            'filter/filter.js': ['coverage'],
+            'watcher/watcher.js': ['coverage'],
             // 'template1/*.html': 'ng-html2js',
             // 'template2/*.html': 'ng-html2js',
             // 'template3/*.htm': 'ng-html2js',
@@ -129,16 +131,19 @@ module.exports = function (config) {
         },
 
         ngHtml2JsPreprocessor: {
-            moduleName: 'templates'
+            moduleName: 'templates',
         },
 
         // test results reporter to use
         // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-        reporters: ['progress','coverage'],
+        reporters: [
+            'progress',
+            'coverage',
+        ],
 
         coverageReporter: {
             type : 'html',
-            dir : '../coverage/'
+            dir : '../coverage/',
         },
 
         // web server port
