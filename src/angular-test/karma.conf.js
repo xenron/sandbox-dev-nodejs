@@ -2,21 +2,27 @@
 module.exports = function (config) {
     config.set({
 
+        // base path, that will be used to resolve files and exclude
         basePath: './app',
 
+        // list of files / patterns to load in the browser
         files: [
             // library
             '../bower_components/jquery/dist/jquery.js',
             '../bower_components/angular/angular.js',
             '../bower_components/angular-mocks/angular-mocks.js',
+            '../bower_components/angular-resource/angular-resource.js',
             '../bower_components/angular-route/angular-route.js',
             '../bower_components/angular-scenario/angular-scenario.js',
             //'components/**/*.js',
             //'view*/**/*.js'
+            // 'app/**/*.js'
+            // 'app/**/*.html'
+            // 'test/**/*.js'
 
             // basic
             'basic/basic.js',
-            'basic/basic_test.js',
+            'basic/basic-spec.js',
 
             // controller
             'controller/pie-controller.js',
@@ -30,10 +36,19 @@ module.exports = function (config) {
             'filter/filter.js',
             'filter/filter-spec.js',
 
-            //
-            // // directive
-            // 'app/directive/basic/template.js',
-            // 'app/directive/basic/template_test.js',
+            // directive
+            'directive/stateful-directive.js',
+            'directive/stateful-directive-spec.js',
+            'directive/text-and-sub-directive.html',
+            'directive/text-and-sub-directive.js',
+            'directive/text-and-sub-directive-spec.js',
+
+            // watcher
+            'watcher/watcher.js',
+            'watcher/watcher-spec.js',
+
+            // 'directive/template-directive.js',
+            // 'directive/template-directive-spec.js',
             //
             // // filter
             // 'filter/filter.js',
@@ -70,8 +85,14 @@ module.exports = function (config) {
             // 'notepad/template.htm'
         ],
 
+        // list of files to exclude
+        exclude: [
+
+        ],
+
         autoWatch: true,
 
+        // frameworks to use
         frameworks: ['jasmine'],
 
         // browsers: ['Safari'],
@@ -99,18 +120,36 @@ module.exports = function (config) {
         preprocessors: {
             // coverage
             'basic/basic.js': ['coverage'],
-            'template1/*.html': 'ng-html2js',
-            'template2/*.html': 'ng-html2js',
-            'template3/*.htm': 'ng-html2js',
-            'template3/*.html': 'ng-html2js'
+            'controller/controller.js': ['coverage'],
+            'filter/filter.js': ['coverage'],
+            'factory/desserts-factory.js': ['coverage'],
+            'directive/stateful-directive.js': ['coverage'],
+            // '**/*.html': ['ng-html2js'],
+            'directive/text-and-sub-directive.html': ['ng-html2js'],
+            // 'template1/*.html': 'ng-html2js',
+            // 'template2/*.html': 'ng-html2js',
+            // 'template3/*.htm': 'ng-html2js',
+            // 'template3/*.html': 'ng-html2js'
         },
 
+        ngHtml2JsPreprocessor: {
+            moduleName: 'templates'
+        },
+
+        // test results reporter to use
+        // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
         reporters: ['progress','coverage'],
-        // preprocessors : {'*.js': 'coverage'},
+
         coverageReporter: {
             type : 'html',
             dir : '../coverage/'
-        }
+        },
+
+        // web server port
+        port: 9876,
+
+        // enable / disable colors in the output (reporters and logs)
+        colors: true,
 
     });
 };

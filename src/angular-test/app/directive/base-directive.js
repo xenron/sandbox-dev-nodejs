@@ -1,4 +1,4 @@
-var app = angular.module('myAppDirective',[]);
+var app = angular.module('appDirective',[]);
 
 app.directive('classDirective',function(){
 	return function(scope, element) {
