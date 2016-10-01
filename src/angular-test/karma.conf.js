@@ -21,6 +21,15 @@ module.exports = function (config) {
             // controller
             'controller/pie-controller.js',
             'controller/pie-controller-spec.js',
+
+            // factory
+            'factory/desserts-factory.js',
+            'factory/desserts-factory-spec.js',
+
+            // filter
+            'filter/filter.js',
+            'filter/filter-spec.js',
+
             //
             // // directive
             // 'app/directive/basic/template.js',
