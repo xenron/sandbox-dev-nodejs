@@ -49,11 +49,7 @@ module.exports = function (config) {
 
             // 'directive/template-directive.js',
             // 'directive/template-directive-spec.js',
-            //
-            // // filter
-            // 'filter/filter.js',
-            // 'filter/filter_test.js',
-            //
+
             // // template1
             // 'app/backup/template1/tabs.js',
             // 'app/backup/template1/app.js',
