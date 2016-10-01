@@ -23,6 +23,9 @@ describe('appPieController module', function () {
         it('Should instantiate slices to 8', function () {
             expect($scope.slices).toEqual(8);
         });
+        it('Should instantiate $scope.lastRequestedFlavor', function () {
+            expect($scope.lastRequestedFlavor).toBeUndefined();
+        });
     });
 
     describe('Action Handlers', function () {
@@ -39,6 +42,14 @@ describe('appPieController module', function () {
                 $scope.eatSilce();
                 expect($scope.slices).toEqual(0);
             });
+        });
+        describe('requestedFlavor', function () {
+            it('Should set $scope.lastRequestedFlavor to the passed in argument', function () {
+                expect($scope.lastRequestedFlavor).toBeUndefined();
+                $controller.requestFlavor("Cherry");
+                expect($scope.lastRequestedFlavor).toEqual("Cherry");
+            });
+
         });
     });
 
