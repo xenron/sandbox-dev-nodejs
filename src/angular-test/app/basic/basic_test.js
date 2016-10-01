@@ -9,9 +9,10 @@ describe('appBasic module1', function() {
 
   beforeEach(function() {
     module('appBasic');
-    inject(function(_$compile_, _$rootScope_, _$templateCache_) {
+    inject(function(_$compile_, _$rootScope_, _$controller_, _$templateCache_) {
       $scope = _$rootScope_;
       $compile = _$compile_;
+      $controller = _$controller_;
     });
   });
 

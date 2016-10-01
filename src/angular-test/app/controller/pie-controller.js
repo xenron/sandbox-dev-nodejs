@@ -5,6 +5,10 @@ var app = angular.module('appController', []);
 app.controller('PieController',
     ['$scope',
         function ($scope) {
+
+            $scope.slices = 8;
+            $scope.lastRequestedFlavor;
+
             $scope.eatSilce = function () {
                 if ($scope.slices) {
                     $scope.slices--;
@@ -15,6 +19,5 @@ app.controller('PieController',
                 $scope.lastRequestedFlavor = flavor;
             }
 
-            $scope.slices = 8;
-            $scope.lastRequestedFlavor;
+
     }]);
