@@ -1,12 +1,13 @@
 'use strict';
 
-var app = angular.module('appPieController', []);
+var app = angular.module('appController', []);
 
-app.controller('PieController', [$scope, function ($scope) {
-    $scope.eatSilce = function () {
-        if ($scope.slices) {
-            $scope.silces--;
-        }
-    };
-    $scope.silces = 8;
-}]);
+app.controller('PieController',
+    ['$scope', function ($scope) {
+        $scope.eatSilce = function () {
+            if ($scope.slices) {
+                $scope.slices--;
+            }
+        };
+        $scope.slices = 8;
+    }]);

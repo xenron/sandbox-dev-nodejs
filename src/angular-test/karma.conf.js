@@ -19,8 +19,8 @@ module.exports = function (config) {
             'basic/basic_test.js',
 
             // controller
-            'app/controller/password-controller.js',
-            'app/controller/password-controller-spec.js',
+            'controller/pie-controller.js',
+            'controller/pie-controller-spec.js',
             //
             // // directive
             // 'app/directive/basic/template.js',

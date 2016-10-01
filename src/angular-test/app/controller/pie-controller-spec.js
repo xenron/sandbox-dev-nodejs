@@ -7,7 +7,7 @@ describe('appPieController module', function () {
     var $scope;
 
     beforeEach(function() {
-        module('appPieController');
+        module('appController');
         // inject(function (_$controller_) {
         //     // The injector unwraps the underscores (_) from around the parameter names when matching
         //     $controller = _$controller_;
@@ -15,64 +15,30 @@ describe('appPieController module', function () {
         inject(function (_$injector_) {
             $rootScope = _$injector_.get('$rootScope');
             $scope = $rootScope.$new();
-            $controller = _$injector_.get('$controller')('appPieController', {$scope: $scope});
+            $controller = _$injector_.get('$controller')('PieController', {$scope: $scope});
         });
     });
 
-
-    it('should be defined ...', inject(function (_$controller_) {
-        //spec body
-        var view1Ctrl = _$controller_('myAppControllerCtrl01');
-        expect(view1Ctrl).toBeDefined();
-    }));
-
-    describe('myAppController controller', function () {
-        it('should be defined ....', inject(function (_$controller_) {
-            //spec body
-            var view1Ctrl = _$controller_('myAppControllerCtrl01');
-            expect(view1Ctrl).toBeDefined();
-        }));
+    describe('Initialization', function () {
+        it('Should instantiate slices to 8', function () {
+            expect($scope.slices).toEqual(8);
+        });
     });
 
-    describe('$scope.grade', function () {
-
-        it('sets the strength to "strong" if the password length is >8 chars', function () {
-            var $scope = {};
-            var controller = $controller('PasswordController', {$scope: $scope});
-            $scope.password = 'longerthaneightchars';
-            $scope.grade();
-            expect($scope.strength).toEqual('strong');
-        });
-
-        it('sets the strength to "weak" if the password length <3 chars', function () {
-            var $scope = {};
-            var controller = $controller('PasswordController', {$scope: $scope});
-            $scope.password = 'a';
-            $scope.grade();
-            expect($scope.strength).toEqual('weak');
-        });
-
-    });
-
-    describe('$scope.grade', function () {
-
-        var $scope, controller;
-
-        beforeEach(function () {
-            $scope = {};
-            controller = $controller('PasswordController', {$scope: $scope});
-        });
-
-        it('sets the strength to "strong" if the password length is >8 chars', function () {
-            $scope.password = 'longerthaneightchars';
-            $scope.grade();
-            expect($scope.strength).toEqual('strong');
-        });
-
-        it('sets the strength to "weak" if the password length <3 chars', function () {
-            $scope.password = 'a';
-            $scope.grade();
-            expect($scope.strength).toEqual('weak');
+    describe('Action Handlers', function () {
+        describe('eatSlice', function () {
+            it('Should decrement the number of slices', function () {
+                expect($scope.slices).toEqual(8);
+                $scope.eatSilce();
+                expect($scope.slices).toEqual(7);
+            });
+            it('Should do nothing when slices is 0', function () {
+                expect($scope.slices).toEqual(8);
+                $scope.slices = 0;
+                expect($scope.slices).toEqual(0);
+                $scope.eatSilce();
+                expect($scope.slices).toEqual(0);
+            });
         });
     });
 
