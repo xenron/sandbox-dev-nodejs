@@ -47,6 +47,16 @@ module.exports = function (config) {
             'watcher/watcher.js',
             'watcher/watcher-spec.js',
 
+            // listener
+            'listener/listener.js',
+            'listener/listener-spec.js',
+
+            // listener
+            'spy/pie-spy.js',
+            'spy/pie-spy-spec.js',
+
+            're-tooling/dessert',
+
             // 'directive/template-directive.js',
             // 'directive/template-directive-spec.js',
 
